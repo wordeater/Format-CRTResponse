@@ -9,12 +9,6 @@ Formats a query response from https://crt.sh into a simple array of strings.
 ## DESCRIPTION
 Certificates are deposited in public, transparent logs. Certificate logs are append-only ledgers of certificates. Because they're distributed and independent, anyone can query them to see what certificates have been included and when. Because they're append-only, they are verifiable by Monitors. Organisations and individuals with the technical skills and capacity can run a log.
 		
-This function queries the public logs using the web front end located at https://crt.sh
-		
-By default, the function performs no deduplication and includes all entries, even those that are expired.
-It also has a default sleep of 5 seconds when a web error occurs and it must retry a request.
-These option can be changed using parameters.
-		
 The input is the response from a query against https://crt.sh and is in the format of an array of strings which is converted into an array of hashes with some post-processing.
 The following section shows the format in which https://crt.sh returns results as JSON.
 ```
